@@ -194,17 +194,3 @@ Isi tabel anggota di awal README sesuai kontribusi nyata setiap anggota. Asisten
 ├── src/train.py
 └── requirements.txt
 ```
-
-## 11. Daftar periksa sebelum dikumpulkan
-
-- [ ] Nama tim, nama anggota, dan NIM sudah diisi.
-- [ ] Repositori GitHub dibuat publik dan semua anggota menjadi collaborator.
-- [ ] Setiap anggota membuat commit sesuai kontribusi.
-- [ ] Notebook dapat dijalankan ulang dari awal sampai akhir.
-- [ ] Baseline dan model final dilaporkan.
-- [ ] Test tidak digunakan untuk tuning.
-- [ ] `artifacts/metadata.json` memuat versi model, fitur, parameter, threshold (null karena regresi), dan metrik.
-- [ ] API dan UI berhasil di-deploy serta dapat dibuka orang lain.
-- [ ] Uji input tidak wajar berhasil menampilkan pesan validasi.
-- [ ] Laporan PDF maksimal 6 halaman dan video demo maksimal 5 menit.
-- [ ] Tautan repositori, aplikasi, dan video sudah dicantumkan.
