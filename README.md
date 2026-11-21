@@ -150,11 +150,7 @@ streamlit run app/ui/streamlit_app.py
 
 Buka dokumentasi API di `http://127.0.0.1:8000/docs` dan aplikasi Streamlit di alamat lokal yang ditampilkan terminal.
 
-## 7. Deployment
-
-Aplikasi terdiri dari dua service, sehingga API dan UI perlu dipublikasikan. Langkah yang disarankan tersedia di [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md). Setelah deployment berhasil, isi tautan aplikasi di bagian atas README. Tautan belum dapat diisi sebelum tim memiliki akun hosting dan repositori publik.
-
-## 8. Keterbatasan
+## 7 Keterbatasan
 
 - Data bersifat sintetis, bukan data operasional gedung sungguhan.
 - Seluruh Maret 2026 tidak tersedia dan ada jam-jam lain yang hilang.
