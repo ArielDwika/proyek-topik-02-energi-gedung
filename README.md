@@ -8,8 +8,8 @@
 
 | Anggota | NIM | Bagian yang dikerjakan |
 |---|---|---|
-| [Nama anggota 1] | [NIM] | [misalnya pemeriksaan data dan EDA] |
-| [Nama anggota 2] | [NIM] | [misalnya rekayasa fitur dan model] |
+| [Ariel Dwika Nugraha] | [2403223] | [misalnya pemeriksaan data dan EDA] |
+| [Dhavin Radithya Dhuha] | [2404287] | [misalnya rekayasa fitur dan model] |
 | [Nama anggota 3] | [NIM] | [misalnya API dan aplikasi] |
 | [Nama anggota 4, jika ada] | [NIM] | [misalnya laporan dan pengujian] |
 
