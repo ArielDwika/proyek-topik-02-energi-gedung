@@ -1,0 +1,16 @@
+{
+  "test_rows": 1440,
+  "baseline": {
+    "MAE_kWh": 24.825277777777778,
+    "RMSE_kWh": 55.68233125407816,
+    "R2": 0.6352931018560334
+  },
+  "model": {
+    "MAE_kWh": 5.455131303533917,
+    "RMSE_kWh": 11.001638820423606,
+    "R2": 0.9857628216740022
+  },
+  "test_period_start": "2026-05-01 00:00:00",
+  "test_period_end": "2026-06-30 23:00:00",
+  "test_policy": "Dibuka setelah pemilihan model dan pelatihan model final; tidak digunakan untuk tuning."
+}

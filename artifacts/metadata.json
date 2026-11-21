@@ -1,0 +1,137 @@
+{
+  "project": "Prediksi Konsumsi Energi Gedung",
+  "case": "02 - Konsumsi Energi Gedung",
+  "model_version": "1.0.0",
+  "model_name": "Random Forest",
+  "target": "konsumsi_kWh",
+  "metric_primary": "MAE (kWh)",
+  "features": [
+    "suhu_luar_C",
+    "okupansi_orang",
+    "hari_libur",
+    "jam",
+    "hari_dalam_minggu",
+    "bulan",
+    "hari_dalam_tahun",
+    "akhir_pekan",
+    "jam_sin",
+    "jam_cos",
+    "minggu_sin",
+    "minggu_cos",
+    "tahun_sin",
+    "tahun_cos",
+    "lag_24",
+    "lag_48",
+    "lag_168",
+    "lag_336",
+    "rata_rata_24jam_sebelumnya",
+    "rata_rata_168jam_sebelumnya"
+  ],
+  "minimum_target_lag_hours": 24,
+  "baseline": "Konsumsi pada jam yang sama tujuh hari sebelumnya (lag 168)",
+  "split": {
+    "train": "sampai 2026-02-28 23:00",
+    "validation": "data tersedia pada 2026-03-01 s.d. 2026-04-30; Maret 2026 tidak tersedia",
+    "test": "mulai 2026-05-01; dibuka setelah model final dikunci"
+  },
+  "train_rows": 18499,
+  "validation_rows": 540,
+  "final_training_rows": 19039,
+  "training_data_end": "2026-04-30 23:00:00",
+  "validation_metrics": [
+    {
+      "model": "Baseline - minggu lalu (lag 168)",
+      "MAE_kWh": 16.040925925925926,
+      "RMSE_kWh": 32.62235969165707,
+      "R2": 0.8935263525160968,
+      "jumlah_sampel": 540
+    },
+    {
+      "model": "Ridge Regression",
+      "MAE_kWh": 11.046303473958503,
+      "RMSE_kWh": 18.12461124484016,
+      "R2": 0.9671338533695525,
+      "jumlah_sampel": 540
+    },
+    {
+      "model": "Random Forest",
+      "MAE_kWh": 5.471991923324219,
+      "RMSE_kWh": 7.666961056182885,
+      "R2": 0.9941189089546705,
+      "jumlah_sampel": 540
+    },
+    {
+      "model": "Extra Trees",
+      "MAE_kWh": 5.677979227292771,
+      "RMSE_kWh": 8.517683796459512,
+      "R2": 0.992741374075508,
+      "jumlah_sampel": 540
+    },
+    {
+      "model": "HistGradientBoosting",
+      "MAE_kWh": 5.861074973714189,
+      "RMSE_kWh": 9.663022605923876,
+      "R2": 0.9906580534255931,
+      "jumlah_sampel": 540
+    },
+    {
+      "model": "Gradient Boosting",
+      "MAE_kWh": 8.453993903328364,
+      "RMSE_kWh": 18.370179439996352,
+      "R2": 0.9662372210614529,
+      "jumlah_sampel": 540
+    }
+  ],
+  "cleaning_pretest": {
+    "jumlah_baris_raw": 19635,
+    "timestamp_tidak_valid": 0,
+    "timestamp_duplikat": 73,
+    "jam_tidak_tercatat": 862,
+    "suhu_kosong": 95,
+    "kelembapan_kosong": 95,
+    "okupansi_kosong": 196,
+    "target_negatif": 17,
+    "target_di_atas_1000": 19
+  },
+  "outlier_policy": "Nilai target <0 atau >1000 kWh ditandai NaN; fitur lag yang hilang diimputasi dengan median data train.",
+  "feature_policy": "Fitur konsumsi hanya memakai lag >=24 jam; rolling window digeser 24 jam.",
+  "inference_note": "Aplikasi harus memakai data meter terbaru. Contoh bawaan berhenti pada data terakhir di dalam CSV.",
+  "test_metrics": {
+    "test_rows": 1440,
+    "baseline": {
+      "MAE_kWh": 24.825277777777778,
+      "RMSE_kWh": 55.68233125407816,
+      "R2": 0.6352931018560334
+    },
+    "model": {
+      "MAE_kWh": 5.455131303533917,
+      "RMSE_kWh": 11.001638820423606,
+      "R2": 0.9857628216740022
+    },
+    "test_period_start": "2026-05-01 00:00:00",
+    "test_period_end": "2026-06-30 23:00:00",
+    "test_policy": "Dibuka setelah pemilihan model dan pelatihan model final; tidak digunakan untuk tuning."
+  },
+  "model_parameters": {
+    "bootstrap": true,
+    "ccp_alpha": 0.0,
+    "criterion": "squared_error",
+    "max_depth": null,
+    "max_features": 0.9,
+    "max_leaf_nodes": null,
+    "max_samples": null,
+    "min_impurity_decrease": 0.0,
+    "min_samples_leaf": 3,
+    "min_samples_split": 2,
+    "min_weight_fraction_leaf": 0.0,
+    "monotonic_cst": null,
+    "n_estimators": 100,
+    "n_jobs": 2,
+    "oob_score": false,
+    "random_state": 42,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "threshold": null,
+  "threshold_note": "Tidak berlaku karena kasus ini merupakan regresi dengan keluaran kontinu."
+}

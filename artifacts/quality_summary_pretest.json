@@ -1,0 +1,11 @@
+{
+  "jumlah_baris_raw": 19635,
+  "timestamp_tidak_valid": 0,
+  "timestamp_duplikat": 73,
+  "jam_tidak_tercatat": 862,
+  "suhu_kosong": 95,
+  "kelembapan_kosong": 95,
+  "okupansi_kosong": 196,
+  "target_negatif": 17,
+  "target_di_atas_1000": 19
+}
