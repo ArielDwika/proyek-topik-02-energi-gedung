@@ -163,11 +163,7 @@ Aplikasi terdiri dari dua service, sehingga API dan UI perlu dipublikasikan. Lan
 - Model hanya dilatih untuk pola dalam rentang data yang tersedia dan memerlukan pembaruan berkala.
 - Perkiraan prediksi tidak menggantikan pembacaan meter, perhitungan kapasitas daya, atau pemeriksaan teknis chiller.
 
-## 9. Pembagian kerja dan penggunaan AI
-
-Isi tabel anggota di awal README sesuai kontribusi nyata setiap anggota. Asisten AI digunakan untuk membantu menyusun struktur kode, pemeriksaan alur fitur, dan draf dokumentasi. Setiap anggota tetap perlu memahami kode yang menjadi tanggung jawabnya dan menguji aplikasi sendiri.
-
-## 10. Struktur repositori
+## 9. Struktur repositori
 
 ```text
 .
