@@ -1,6 +1,6 @@
-# Prediksi Konsumsi Energi Gedung · Tim [Nama Tim]
+# Prediksi Konsumsi Energi Gedung · Tim Le Mineral X Aqua
 
-> Proyek Machine Learning MKB UPI - Kasus 02. Lengkapi nama tim, nama anggota, NIM, tautan aplikasi, dan video sebelum dikumpulkan.
+> Proyek Machine Learning MKB 5B Kasus 02.
 
 **Kasus:** 02 - Konsumsi Energi Gedung  
 
