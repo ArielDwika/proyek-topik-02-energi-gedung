@@ -3,8 +3,6 @@
 > Proyek Machine Learning MKB UPI - Kasus 02. Lengkapi nama tim, nama anggota, NIM, tautan aplikasi, dan video sebelum dikumpulkan.
 
 **Kasus:** 02 - Konsumsi Energi Gedung  
-**Aplikasi:** [isi tautan setelah deployment]  
-**Video demo:** [isi tautan setelah video selesai]
 
 | Anggota | NIM | Bagian yang dikerjakan |
 |---|---|---|
